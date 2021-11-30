@@ -1,6 +1,5 @@
 ## Project: Bedroom Villas
-****Link**: **
-
+**Features:**
  - **This is a resort or hotel room booking related website** 
  - **Anyone who wants to book hotel room, can use this site**
  - **User can see the location of the hotel and price**
@@ -15,4 +14,9 @@
  - Node js
  - Express js
 
-> Note: Google map won't work in live site
+**Screenshots:**
+![weather UI](https://i.ibb.co/vsCjskS/1.png)
+
+![error handeling](https://i.ibb.co/0hbRfFL/2.png)
+
+![rate limiting](https://i.ibb.co/Qc7jBMB/3.png)
