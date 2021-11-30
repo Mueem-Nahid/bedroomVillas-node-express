@@ -1,0 +1,42 @@
+[
+  {
+    "country": "india",
+    "city": "new delhi",
+    "maxCel": 25,
+    "minCel": 19,
+    "maxFar": 77,
+    "minFar": 65
+  },
+  {
+    "country": "iran",
+    "city": "tehran",
+    "maxCel": 18,
+    "minCel": 8,
+    "maxFar": 64,
+    "minFar": 47
+  },
+  {
+    "country": "bangladesh",
+    "city": "dhaka",
+    "maxCel": 32,
+    "minCel": 19,
+    "maxFar": 90,
+    "minFar": 65
+  },
+  {
+    "country": "china",
+    "city": "beijing",
+    "maxCel": 12,
+    "minCel": 3,
+    "maxFar": 53,
+    "minFar": 38
+  },
+  {
+    "country": "afghanistan",
+    "city": "kabul",
+    "maxCel": 14,
+    "minCel": 2,
+    "maxFar": 57,
+    "minFar": 35
+  }
+]

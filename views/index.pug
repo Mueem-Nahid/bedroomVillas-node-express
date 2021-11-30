@@ -1,0 +1,448 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../../style.css')
+  // fontawesome
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  // bootstrap
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  link(rel='stylesheet' href='//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css')
+  // slider
+  link(rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css')
+  link(rel='icon' href='../../images/icons8-resort-50.png' type='image/gif' sizes='16x16')
+  title Bedroom Villas
+#main
+  header
+    div
+      .d-flex.flex-row
+        .dropdown
+          img#menu.dropbtn(src='../../images/icons8-menu-50.png' alt='')
+          .dropdown-content
+            a.dropdown-item(href='#') Home
+            a.dropdown-item(href='#') Bookmarked
+            a.dropdown-item(href='#') List Your Property
+            a.dropdown-item(href='#') About
+            a.dropdown-item(href='#') FAQ
+            a.dropdown-item(href='#') Blog
+        a.navbar-brand.px-2.fw-bold.fs-4(href='#')
+          span
+            i.fab.fa-pagelines.text-warning
+          |             Bedroom
+          span.text-warning Villas
+      img#mobileMenu.menu(src='../../images/icons8-menu-50.png' alt='')
+      #mobileMenuList.hide.dropdown-menu
+        ul.list-group.py-1(aria-labelledby='dropdownMenuButton1')
+          li.menuList
+            a.dropdown-item(href='#') Home
+          li.menuList
+            a.dropdown-item(href='#') Bookmarked
+          li.menuList
+            a.dropdown-item(href='#') List Your Property
+          li.menuList
+            a.dropdown-item(href='#') About
+          li.menuList
+            a.dropdown-item(href='#') FAQ
+          li.menuList
+            a.dropdown-item(href='#') Blog
+    .py-3.py-md-0
+      .d-flex.flex-row
+        // form
+        form#sampleForm.row.gy-2.gx-3.align-items-center(name='form')
+          .col-auto.search
+            input#search_input(name='destination' type='text' placeholder='Arizona, USA' onkeypress='handleSearch()')
+            i.fas.fa-search.myIcon
+          .col-auto.search.ms-2
+            input#date_ex(name='date' type='text' placeholder='Check In')
+            i.far.fa-calendar-alt.text-primary.myIcon
+          .col-auto.search
+            input#check_out(name='checkOut' type='text' placeholder='Check Out')
+          .col-auto
+            button#guestValue.btn.btn-light.border(name='guestValue' value='1' type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+              i.fas.fa-user-friends
+              |  Guest 
+              i.fas.fa-caret-down
+          .col-auto
+            button#priceValue.btn.btn-light.border(name='price' type='button' value='' data-bs-toggle='modal' data-bs-target='#exampleModal2')
+              | Price range 
+              i.fas.fa-caret-down
+          .col-auto
+            button#search.btn.btn-warning.text-white(data-bs-toggle='modal' data-bs-target='#exampleModal3' type='submit') Search
+  section
+    // card
+    .px-3
+      p.m-2
+        | Vacation Rentals in Arizona 
+        span.text-warning
+          | | 
+          a.text-warning.breadcrumbAnchor(href='#') USA
+          |  &gt; 
+          a.text-warning.breadcrumbAnchor(href='#') Arizona
+      .row
+        .col-12.col-md-4
+          .card.border.p-2.mb-2
+            .imgRelative
+              img.card-img-top(src='../../images/alexander-kaunas--4BULVnHGg8-unsplash.jpg' alt='...')
+              button.btn.btn-light.picBtn.btn-sm
+                | More Photos 
+                i.fas.fa-external-link-alt.p-1
+              button.btn.btn-light.picBtnFrom.btn-sm
+                | From 
+                span.fw-bold  &#x9F3;
+                |  150
+              button.heartIcon.btn.btn-secondary.btn-sm
+                i.far.fa-heart
+            .card-body
+              h5.card-title The Nautical Beachfornt Resort
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  |                     683 reviews
+                p Sleeps 300
+                small.text-primary Arizona &gt; Lake Havasu City
+              div
+                button.btn.btn-warning Details
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p.text-muted
+                  i.fas.fa-check.p-1
+                  |                     View 
+                  i.fas.fa-check.p-1
+                  |  Child Friendly
+              div
+                p.text-muted BC-36711
+        .col-12.col-md-4
+          .card.border.p-2.mb-2
+            .imgRelative
+              img.card-img-top(src='../../images/Optimized-the-anam-J9O3WcJ5N74-unsplash.jpg' alt='...')
+              button.btn.btn-light.picBtn.btn-sm
+                | More Photos 
+                i.fas.fa-external-link-alt.p-1
+              button.btn.btn-light.picBtnFrom.btn-sm
+                | From 
+                span.fw-bold  &#x9F3;
+                |  150
+              button.heartIcon.btn.btn-secondary.btn-sm
+                i.far.fa-heart
+            .card-body
+              h5.card-title Bluegreen Vacations Cibola Resort
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  |                     1000 reviews
+                p Sleeps 400
+                small.text-primary Central Arizona &gt; Sun City West
+              div
+                button.btn.btn-warning Details
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p.text-muted
+                  i.fas.fa-check.p-1
+                  |                     View 
+                  i.fas.fa-check.p-1
+                  |  Child Friendly
+              div
+                p.text-muted BC-36711
+        .col-12.col-md-4
+          .card.border.p-2.mb-2
+            .imgRelative
+              img.card-img-top(src='../../images/Optimized-saad-khan-I5c9i-hooag-unsplash.jpg' alt='...')
+              button.btn.btn-light.picBtn.btn-sm
+                | More Photos 
+                i.fas.fa-external-link-alt.p-1
+              button.btn.btn-light.picBtnFrom.btn-sm
+                | From 
+                span.fw-bold  &#x9F3;
+                |  150
+              button.heartIcon.btn.btn-secondary.btn-sm
+                i.far.fa-heart
+            .card-body
+              h5.card-title Westward Look Wyndham Resort
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  |                     300 reviews
+                p Sleeps 100
+                small.text-primary Arizona &gt; Casas Adobes
+              div
+                button.btn.btn-warning Details
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p.text-muted
+                  i.fas.fa-check.p-1
+                  |                     View 
+                  i.fas.fa-check.p-1
+                  |  Child Friendly
+              div
+                p.text-muted BC-36711
+      .row
+        .col-12.col-md-4
+          .card.border.p-2.mb-2
+            .imgRelative
+              img.card-img-top(src='../../images/roberto-nickson-EeeKjwm2vDo-unsplash.jpg' alt='...')
+              button.btn.btn-light.picBtn.btn-sm
+                | More Photos 
+                i.fas.fa-external-link-alt.p-1
+              button.btn.btn-light.picBtnFrom.btn-sm
+                | From 
+                span.fw-bold  &#x9F3;
+                |  150
+              button.heartIcon.btn.btn-secondary.btn-sm
+                i.far.fa-heart
+            .card-body
+              h5.card-title Wekopa Casiono Resort
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  |                     900 reviews
+                p Sleeps 200
+                small.text-primary Arizona &gt; Lake Havasu City
+              div
+                button.btn.btn-warning Details
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p.text-muted
+                  i.fas.fa-check.p-1
+                  |                     View 
+                  i.fas.fa-check.p-1
+                  |  Child Friendly
+              div
+                p.text-muted BC-36711
+        .col-12.col-md-4
+          .card.border.p-2.mb-2
+            .imgRelative
+              img.card-img-top(src='../../images/artie-kostenko-a6EzvPjXfBY-unsplash.jpg' alt='...')
+              button.btn.btn-light.picBtn.btn-sm
+                | More Photos 
+                i.fas.fa-external-link-alt.p-1
+              button.btn.btn-light.picBtnFrom.btn-sm
+                | From 
+                span.fw-bold  &#x9F3;
+                |  150
+              button.heartIcon.btn.btn-secondary.btn-sm
+                i.far.fa-heart
+            .card-body
+              h5.card-title The Lodge at Ventana Canyon
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  |                     100 reviews
+                p Sleeps 500
+                small.text-primary Arizona &gt; Lake Havasu City
+              div
+                button.btn.btn-warning Details
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p.text-muted
+                  i.fas.fa-check.p-1
+                  |                     View 
+                  i.fas.fa-check.p-1
+                  |  Child Friendly
+              div
+                p.text-muted BC-36711
+        .col-12.col-md-4
+          .card.border.p-2.mb-2
+            .imgRelative
+              img.card-img-top(src='../../images/helena-lopes-amJwq0XLZ_8-unsplash.jpg' alt='...')
+              button.btn.btn-light.picBtn.btn-sm
+                | More Photos 
+                i.fas.fa-external-link-alt.p-1
+              button.btn.btn-light.picBtnFrom.btn-sm
+                | From 
+                span.fw-bold  &#x9F3;
+                |  150
+              button.heartIcon.btn.btn-secondary.btn-sm
+                i.far.fa-heart
+            .card-body
+              h5.card-title Hilton Phoenix Resort
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  i.fas.fa-star.text-warning
+                  |                     340 reviews
+                p Sleeps 250
+                small.text-primary Arizona &gt; Lake Havasu City
+              div
+                button.btn.btn-warning Details
+            .card-body.d-flex.flex-row.align-items-center.justify-content-between
+              div
+                p.text-muted
+                  i.fas.fa-check.p-1
+                  |                     View 
+                  i.fas.fa-check.p-1
+                  |  Child Friendly
+              div
+                p.text-muted BC-36711
+  // weather section
+  section.px-3.my-4
+    .d-flex.justify-content-between.py-3
+      div
+        h3(style='text-transform: capitalize') Weather in: #{city} #{country}
+      div
+        button#convert.btn.btn-dark(onclick='convertUnit()') Farenheit
+    // for celsius
+    #celsius-sec
+      .row
+        .col-12.col-md-3
+          .card.p-3
+            i.fas.fa-cloud-sun-rain.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxCel} &deg;C || Low: #{minCel} &deg;C
+        .col-12.col-md-3
+          .card.p-3
+            i.far.fa-snowflake.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxCel} &deg;C || Low: #{minCel} &deg;C
+        .col-12.col-md-3
+          .card.p-3
+            i.fas.fa-sun.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxCel} &deg;C || Low: #{minCel} &deg;C
+        .col-12.col-md-3
+          .card.p-3
+            i.fas.fa-cloud-showers-heavy.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxCel} &deg;C || Low: #{minCel} &deg;C
+    // for farenheit
+    #farenheit-sec(style='display: none;')
+      .row
+        .col-12.col-md-3
+          .card.p-3
+            i.fas.fa-cloud-sun-rain.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxFar} &deg;F Low: #{minFar} &deg;F
+        .col-12.col-md-3
+          .card.p-3
+            i.far.fa-snowflake.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxFar} &deg;F Low: #{minFar} &deg;F
+        .col-12.col-md-3
+          .card.p-3
+            i.fas.fa-sun.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxFar} &deg;F Low: #{minFar} &deg;F
+        .col-12.col-md-3
+          .card.p-3
+            i.fas.fa-cloud-showers-heavy.fa-4x.text-center
+            .card-body.text-center
+              h5.card-title December-February
+              p.card-text High: #{maxFar} &deg;F Low: #{minFar} &deg;F
+// map
+section.my-4
+  #map.text-center(style='width: 100%; height: 100vh; display: none;')
+// show map button
+#show-map
+  .d-flex.justify-content-center.fixed-bottom.mb-5
+    button#mapBtn.btn.btn-dark.rounded-pill(onclick='myFunction()')
+      | Show Map 
+      i.fas.fa-map.p-1
+// show map button
+#show-list(style='display: none;')
+  .d-flex.justify-content-center.fixed-bottom.mb-5
+    button.btn.btn-dark.rounded-pill(onclick='myFunction()')
+      | Show List 
+      i.fas.fa-list.p-1
+// Modal for guest
+#exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Number of guests
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body
+        .d-flex.justify-content-around
+          div
+            button#btn-decrement-total.btn.btn-light.btn-lg
+              i.fas.fa-minus-circle.text-warning.fa-2x
+          div
+            h1#total 1
+          div
+            button#btn-increment-total.btn.btn-light.btn-lg
+              i.fas.fa-plus-circle.text-warning.fa-2x
+      .modal-footer
+        button.btn.btn-warning.text-white(type='button' onclick='modalGuestvalue()' data-bs-dismiss='modal') Apply
+// Modal for price
+#exampleModal2.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title
+          | Price range 
+          span.text-warning
+            | &amp;#2547 0 - &amp;#2547 120000
+            | + per night
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      // slider
+      .modal-body
+        input#amount(type='text' readonly='' style='border:0; color:#d3be63; font-weight:bold;')
+        #slider-range
+      .modal-footer
+        button.btn.btn-warning.text-white(onclick='modalPriceValue()' type='button' data-bs-dismiss='modal') Apply
+// Modal for all search values
+#exampleModal3.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Your search results
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body
+        p
+          | Search: 
+          span#search_name.text-warning.fw-bold
+        p
+          | Check in: 
+          span#check_in_value.text-warning.fw-bold
+        p
+          | Check out: 
+          span#check_out_value.text-warning.fw-bold
+        p
+          | Guests: 
+          span#guests_value.text-warning.fw-bold
+        p
+          | Price range: 
+          span#show_price.text-warning.fw-bold
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+// js
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+script(src='//code.jquery.com/jquery-1.10.2.js')
+script(src='//code.jquery.com/ui/1.11.2/jquery-ui.js')
+script(type='text/javascript' src='../../script.js')
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyArTUpPxK58U3xCnOuoFYGMtLfce4S0Ok4&libraries=places&callback=initMap&v=weekly')

@@ -1,0 +1,205 @@
+header{
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  z-index: 10;
+  background: #fff;
+}
+
+#mobileMenu{
+  display: none;
+}
+
+.menuList{
+  list-style: none;
+}
+
+header .search{
+  position: relative;
+  width: 200px;
+  height: 40px;
+}
+
+header .search input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0 10px 0 40px;
+}
+
+header .search .myIcon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+.hide{
+  /* display: none; */
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.menu:hover + .hide{
+  display: block;
+}
+
+.breadcrumbAnchor{
+  text-decoration: none;
+}
+
+.imgRelative{
+  position: relative;
+}
+
+.picBtn{
+    position: absolute; 
+    top:20px; 
+    right: 20px;
+}
+
+.picBtnFrom{
+  position: absolute; 
+  bottom: 20px; 
+  left: 20px;
+}
+
+.heartIcon{
+  position: absolute; 
+  bottom: 20px; 
+  right: 20px;
+}
+
+/* calender 
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+    background:#846733;  
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+    color:#FFFFFF;
+    background:#846733;  
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .7em;
+	border-collapse: collapse;
+    font-family:verdana;
+	margin: 0 0 .4em;
+    color:#000000;
+    background:#FDF8E4;    
+}
+.ui-datepicker td {
+
+	border: 0;
+	padding: 1px;
+
+    
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .8em;
+	text-align: right;
+	text-decoration: none;
+}
+*/
+
+/* range slider
+.rangeslider{
+  width: 50%;
+}
+
+.myslider {
+  -webkit-appearance: none;
+  background: #749edd;
+  width: 80%;
+  height: 10px;
+  opacity: 2;
+  cursor: pointer;
+ }
+
+
+.myslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #34495E  ;
+  width: 25%;
+  height: 20px;
+}
+.myslider:hover {
+  opacity: 2;
+}
+*/
+
+/* map */
+
+@media (max-width: 991px)
+{
+  header
+  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #search{
+    display: none;
+  }
+
+  #menu{
+    display: none;
+  }
+
+  #mobileMenu{
+    display: block;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    position:absolute;
+  }
+
+  #mobileMenuList{
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+  }
+
+  header .search{
+    width: 60px;
+  }
+
+  header .search input{
+    width: 100%;
+  }
+}
